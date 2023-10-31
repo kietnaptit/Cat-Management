@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/input_the_new_cat"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/catImageSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/catImageSpinner"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        tools:layout_editor_absoluteY="76dp"
+        app:layout_constraintBottom_toTopOf="@+id/inNameField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appTitle" />
+
+    <EditText
+        android:id="@+id/inNameField"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="126dp"
+        app:layout_constraintBottom_toTopOf="@+id/inPriceField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/catImageSpinner" />
+
+    <EditText
+        android:id="@+id/inPriceField"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="180dp"
+        app:layout_constraintBottom_toTopOf="@+id/inDesField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inNameField"/>
+
+    <EditText
+        android:id="@+id/inDesField"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="234dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inPriceField"/>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:text="@string/add"
+        app:layout_constraintBottom_toTopOf="@+id/catList"
+        app:layout_constraintEnd_toStartOf="@+id/btnUpdate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inDesField" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="94dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/update"
+        app:layout_constraintBottom_toTopOf="@+id/catList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnAdd" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/catList"
+        android:layout_width="412dp"
+        android:layout_height="348dp"
+        tools:layout_editor_absoluteY="383dp" app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAdd"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
